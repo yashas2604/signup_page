@@ -2,17 +2,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/fireba
 import {getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 import{getFirestore, getDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
 
-const firebaseConfig = {
-    
-    apiKey: "AIzaSyAzXJ7XmbVB5a1gNO8xW6mOQGJ_CG9ZtyI",
+const firebaseConfig = {apiKey: "AIzaSyAzXJ7XmbVB5a1gNO8xW6mOQGJ_CG9ZtyI",
     authDomain: "deliveryservices-5b370.firebaseapp.com",
     projectId: "deliveryservices-5b370",
     storageBucket: "deliveryservices-5b370.appspot.com",
     messagingSenderId: "693184436479",
     appId: "1:693184436479:web:d4a837d13a96dcd2e954ca",
-    measurementId: "G-JPC9H9XZK1"
- 
-};
+    measurementId: "G-JPC9H9XZK1" };
  
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
@@ -53,7 +49,7 @@ const firebaseConfig = {
     localStorage.removeItem('loggedInUserId');
     signOut(auth)
     .then(()=>{
-        window.location.href='index1.html';
+        window.location.href='index.html';
     })
     .catch((error)=>{
         console.error('Error Signing out:', error);
